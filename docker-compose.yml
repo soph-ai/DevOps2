@@ -4,6 +4,9 @@ services:
     container_name: mysql
     build: ./db
     image: trio-db
+    environment: 
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSSWORD}
+      MYSQL_DATABASE: flask-db
     volumes:
     - type: volume
       source: dbvolume
